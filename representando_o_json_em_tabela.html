@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tabela de Dados</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th Scope="col">Number</th>
+            <th scope="col">Name</th>
+            <th scope="col">Age</th>
+            <th scope="col">City</th>
+            <th scope="col">Country</th>
+        </tr>
+        <!-- Loop através dos índices da coluna 'Number' -->
+        {% for i in data.Number %}
+            <tr>
+                <!-- Usando o índice - 1 para acessar os elementos corretos nas listas -->
+                <th scope="row"> {{ data.Number[i-1] }} </td>
+                <th scope="row"> {{ data.Name[i-1] }} </td>
+                <th scope="row"> {{ data.Age[i-1] }} </td>
+                <th scope="row"> {{ data.City[i-1] }} </td>
+                <th scope="row"> {{ data.Country[i-1] }} </td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
